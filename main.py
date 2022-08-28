@@ -26,11 +26,15 @@ tab2 = pd.read_excel('/Users/xxxda/Documents/GitHub/hha-data-ingestion/data/fake
 print(tab1)
 print(tab2)
 
-###Code below is for main desktop
-#xls = xlrd.open_workbook('data/fakepatientdata.xlsx', on_demand=True)
-#xls = xlrd.open_workbook('D:/GitHub/', 'hha-data-ingestion/data/fakepatientdata.xlsx', on_demand=True)
-#xls.sheet_names() 
-#fkdatadir.sheet_names()
+#########Code below is for main desktop
+##dfkdata = xlrd.open_workbook('/Users/xxxda/Documents/GitHub/hha-data-ingestion/data/fakepatientdata.xls', on_demand=True)
+##print(dfkdata.sheet_names())
+
+##dtab1 = pd.read_excel('/GitHub/hha-data-ingestion/data/fakepatientdata.xls', sheet_name="Sheet1")
+##dtab2 = pd.read_excel('/GitHub/hha-data-ingestion/data/fakepatientdata.xls', sheet_name="Sheet2")
+
+#print(dtab1)
+#print(dtab2)
 
 ##Section 2 - Use the requests package to open a json API via CMS
 
