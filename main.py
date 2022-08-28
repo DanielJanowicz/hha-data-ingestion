@@ -29,13 +29,16 @@ print(tab2)
 #########Code below is for main desktop
 ##dfkdata = xlrd.open_workbook('/Users/xxxda/Documents/GitHub/hha-data-ingestion/data/fakepatientdata.xls', on_demand=True)
 ##print(dfkdata.sheet_names())
-
 ##dtab1 = pd.read_excel('/GitHub/hha-data-ingestion/data/fakepatientdata.xls', sheet_name="Sheet1")
 ##dtab2 = pd.read_excel('/GitHub/hha-data-ingestion/data/fakepatientdata.xls', sheet_name="Sheet2")
-
 #print(dtab1)
 #print(dtab2)
 
 ##Section 2 - Use the requests package to open a json API via CMS
+coviddata = requests.get('https://data.cms.gov/data-api/v1/dataset/1a52430d-febb-458d-9691-4d38a64c376d/data')
+coviddata = coviddata.json()
+
+##Section 3 - Pull 2 open source bigquery datasets; limiting to the first 100 rows as a dataframe
+
 
 print("Finished Running")
