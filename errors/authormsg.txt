@@ -1,2 +1,5 @@
-This is the errors presented in the repo
+Error with Section 3 in main.py
+
+When attempting to pull data from BigQuery, terminal states that access is denied due to project not having proper permissions for 
+BigQuery.jobs.create
 

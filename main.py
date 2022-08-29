@@ -39,7 +39,18 @@ coviddata = requests.get('https://data.cms.gov/data-api/v1/dataset/1a52430d-febb
 coviddata = coviddata.json()
 
 ##Section 3 - Pull 2 open source bigquery datasets; limiting to the first 100 rows as a dataframe
+client = bigquery.Client.from_service_account_json('D:\GitHub\hha-data-ingestion\daniel-507-4cbcd50c9eb6.json')
+##First Dataset
+query_data1 = client.query("*SELECT *  FROM `patents-public-data.google_patents_research.publications` LIMIT 100")
+dataresults1 = query_data1.results()
 
+bigquery1 = pd.DataFrame(dataresults1.to_datadframe())
+
+##Second Dataset
+query_data2 = client.query("*SELECT * FROM `bigquery-public-data.faa.us_airports` LIMIT 100")
+dataresults2 = query_data2.results()
+
+bigquery2 = pd.DataFrame(dataresults2.to_dataframe())
 
 
 print("Finished Running")
